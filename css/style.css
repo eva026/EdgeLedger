@@ -1,0 +1,271 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #333;
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+h1,
+h2 {
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+p {
+  margin: 10px 0;
+}
+
+img {
+  width: 100%;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  opacity: 0.7;
+  position: fixed;
+  color: #fff;
+  top: 0px;
+  width: 100%;
+  height: 70px;
+  padding: 0 30px;
+  transition: 0.5s;
+}
+
+.navbar.top {
+  background: transparent;
+}
+
+.logo {
+  font-weight: 400;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar a {
+  padding: 10px 20px;
+  margin: 0 5px;
+  color: #fff;
+}
+
+.navbar a:hover {
+  border-bottom: #28a745 3px solid;
+}
+
+/* Header */
+.hero {
+  background: url("../images/home/showcase.jpg") no-repeat center center/cover;
+  height: 100vh;
+  color: #fff;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.hero .content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  /* if without the line below, the width of button is across the screen.*/
+  /* Beacuse by default align-items: stretch; */
+  align-items: center;
+  height: 100%;
+  /* only with the line below not working */
+  /* z-index: 1; */
+  /* this line is also a must to put the concent to the front */
+  /* position: relative; */
+  padding: 0 20px;
+}
+
+.hero .content h1 {
+  font-size: 55px;
+}
+
+.hero .content p {
+  font-size: 23px;
+  max-width: 600px;
+  margin: 20px 0 30px;
+}
+
+.hero * {
+  z-index: 10;
+}
+
+/* Icons */
+.icons {
+  padding: 30px;
+}
+
+.icons h3 {
+  /* this line below not work  maybe h3 is builtin bold? */
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.icons i {
+  border-radius: 50%;
+  background: #28a745;
+  padding: 16px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+/* cases row */
+.flex-grid {
+  margin-bottom: 20px;
+}
+
+.flex-grid .column img {
+  padding: 5px;
+  height: 50%;
+}
+
+.flex-grid .row {
+  display: flex;
+  flex-basis: 25%;
+  padding: 0 20px;
+}
+
+.flex-grid .row .column {
+  flex: 25%;
+}
+/* Team */
+.team .flex-items img {
+  border-radius: 50%;
+}
+
+.team .flex-items h4 {
+  font-size: 26px;
+}
+
+/* Callback Form */
+.callback-form {
+  width: 100%;
+}
+
+.callback-form input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: #f5f5f5 1px solid;
+  border-radius: 5px;
+}
+
+.callback-form input:focus {
+  outline-color: #28a745;
+}
+
+/* Blog */
+.hero.blog {
+  height: 30vh;
+  background: url("/images/home/blog.jpg") no-repeat center center/cover;
+}
+
+/* Post */
+.post {
+  padding: 30px 20px;
+}
+.post h1 {
+  border-bottom: #ccc 1px solid;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+.post img {
+  display: block;
+  border-radius: 50%;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 200px;
+}
+
+.footer a {
+  color: #fff;
+}
+
+.footer a:hover {
+  color: #28a745;
+}
+
+.footer .social > * {
+  margin-right: 30px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: 120px;
+    padding: 10px 10px;
+  }
+  .flex-columns .row,
+  .flex-items {
+    flex-direction: column;
+  }
+
+  .flex-grid .row {
+    flex-direction: column;
+  }
+
+  .flex-grid .column img {
+    height: 100%;
+    width: 50%;
+  }
+  .flex-grid .column {
+    display: flex;
+  }
+
+  .team .flex-items img {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 414px) {
+  .flex-grid .column {
+    flex-direction: column;
+  }
+
+  .flex-grid .column img {
+    width: 100%;
+  }
+}
