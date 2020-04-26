@@ -236,8 +236,9 @@ img {
   .navbar {
     flex-direction: column;
     height: 120px;
-    padding: 10px 10px;
+    padding: 20px;
   }
+
   .flex-columns .row,
   .flex-items {
     flex-direction: column;
@@ -247,9 +248,13 @@ img {
     flex-direction: column;
   }
 
+  .flex-grid .column a {
+    height: unset;
+    width: 50%;
+  }
+
   .flex-grid .column img {
     height: 100%;
-    width: 50%;
   }
   .flex-grid .column {
     display: flex;
@@ -265,7 +270,12 @@ img {
     flex-direction: column;
   }
 
-  .flex-grid .column img {
+  .flex-grid .column a {
     width: 100%;
+  }
+
+  .navbar a {
+    padding: 10px 10px;
+    margin: 0 3px;
   }
 }
