@@ -186,10 +186,14 @@ img {
   outline-color: #28a745;
 }
 
+.callback-form .btn {
+  -webkit-appearance: none;
+}
+
 /* Blog */
 .hero.blog {
   height: 30vh;
-  background: url("/images/home/blog.jpg") no-repeat center center/cover;
+  background: url("../images/home/blog.jpg") no-repeat center center/cover;
 }
 
 /* Post */
@@ -277,5 +281,9 @@ img {
   .navbar a {
     padding: 10px 10px;
     margin: 0 3px;
+  }
+
+  .hero.blog .content h1 {
+    padding-top: 60px;
   }
 }
