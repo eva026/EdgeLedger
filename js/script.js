@@ -1,18 +1,19 @@
-const navbar = document.getElementById("navbar");
+const navbar = document.getElementById('navbar');
 let scrolled = false;
 
+// Navbar background transparent or not
 window.onscroll = function () {
   if (this.pageYOffset > 100) {
-    navbar.classList.remove("top");
+    navbar.classList.remove('top');
     if (!scrolled) {
-      navbar.style.transform = "translateY(-70px)";
+      navbar.style.transform = 'translateY(-70px)';
     }
     setTimeout(function () {
-      navbar.style.transform = "translateY(0)";
+      navbar.style.transform = 'translateY(0)';
       scrolled = true;
     }, 200);
   } else {
-    navbar.classList.add("top");
+    navbar.classList.add('top');
     scrolled = true;
   }
 };
